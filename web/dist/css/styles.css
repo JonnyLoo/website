@@ -1,0 +1,65 @@
+@font-face {
+  font-family: 'Elianto';
+  src: url("/font/elianto.otf") format("woff"), url("/font/elianto.ttf") format("woff"); }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Elianto';
+  text-transform: uppercase; }
+
+#title {
+  position: absolute;
+  margin: 0;
+  width: 100%;
+  top: 25px;
+  font-size: 4em;
+  text-align: center;
+  letter-spacing: .2em;
+  color: #CACBCE; }
+
+.navbar {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  bottom: 20px;
+  list-style-type: none;
+  text-align: center; }
+  .navbar li {
+    display: inline; }
+    .navbar li:not(:first-of-type):before {
+      content: '  .  ';
+      color: #CACBCE;
+      vertical-align: 30%; }
+  .navbar a {
+    display: inline-block;
+    font-size: 1.2em;
+    text-decoration: none;
+    color: #CACBCE;
+    transition: color .6s ease; }
+    .navbar a:hover {
+      color: #355384; }
+
+#block1 {
+  width: auto;
+  height: 100vh;
+  background: #25242B url("/img/spidey.jpg") no-repeat center center fixed;
+  background-size: cover; }
+
+#block2, #block3, #block4, #block5 {
+  width: 50%;
+  height: 100vh;
+  float: left; }
+
+#block2 {
+  background: #355384; }
+
+#block3 {
+  background: #BF4141; }
+
+#block4 {
+  background: #355384; }
+
+#block5 {
+  background: #BF4141; }
