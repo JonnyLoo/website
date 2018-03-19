@@ -122,7 +122,7 @@ body {
   }
 }
 
-#block1 {
+#landing {
   width: auto;
   height: 100vh;
   background: $black url('/img/spidey.jpg') no-repeat center center fixed;
@@ -144,12 +144,12 @@ body {
   }
 }
 
-#block2, #block3, #block4 {
+#about, #about-info, #work, #work-info {
   width: 50%;
   height: 100vh;
 }
 
-#block2 {
+#about {
   background: $blue;
   float: left;
 
@@ -167,12 +167,12 @@ body {
     top: calc(100vh - 50px);
 
     a:hover {
-      color: $red;
+      color: $black;
     }
   }
 }
 
-#block3 {
+#about-info {
   background: $red;
   height: 400vh;
   position: absolute;
@@ -184,6 +184,8 @@ body {
     display: block;
     text-align: center;
     top: 50vh;
+    margin: auto;
+    width: 90%;
   }
 
   .hexagon {
@@ -194,9 +196,55 @@ body {
   }
 }
 
-#block4 {
-  background: $red;
+#work {
   position: absolute;
+  background: $red;
   left: 0px;
   top: 500vh;
+  min-width: 50vw;
+
+  h2 {
+    position: relative;
+    margin: 0;
+    width: 100%;
+    top: calc(50% - 20px);
+    font-size: 3em;
+    text-align: center;
+    color: $black;
+  }
+
+  .navbar {
+    top: calc(100vh - 50px);
+
+    li:not(:first-of-type):before {
+      content: '  .  ';
+      color: $black;
+      vertical-align: 30%;
+    }
+
+    a {
+      color: $black;
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+}
+
+#work-info {
+  background: $blue;
+  position: absolute;
+  right: 0px;
+  top: 500vh;
+  height: 400vh;
+
+  p {
+    position: relative;
+    display: block;
+    text-align: center;
+    top: 50vh;
+    margin: auto;
+    width: 90%;
+    color: $white;
+  }
 }
