@@ -123,7 +123,7 @@ body {
 }
 
 #landing {
-  width: auto;
+  width: 100%;
   height: 100vh;
   background: $black url('/img/spidey.jpg') no-repeat center center fixed;
   background-size: cover;
@@ -144,7 +144,7 @@ body {
   }
 }
 
-#about, #about-info, #work, #work-info {
+#about, #about-info, #work, #work-info, #skills, #skills-info {
   width: 50%;
   height: 100vh;
 }
@@ -174,7 +174,7 @@ body {
 
 #about-info {
   background: $red;
-  height: 400vh;
+  height: 500vh;
   position: absolute;
   right: 0px;
   top: 100vh;
@@ -200,7 +200,7 @@ body {
   position: absolute;
   background: $red;
   left: 0px;
-  top: 500vh;
+  top: 600vh;
   min-width: 50vw;
 
   h2 {
@@ -235,8 +235,8 @@ body {
   background: $blue;
   position: absolute;
   right: 0px;
-  top: 500vh;
-  height: 400vh;
+  top: 600vh;
+  height: 500vh;
 
   p {
     position: relative;
@@ -246,5 +246,102 @@ body {
     margin: auto;
     width: 90%;
     color: $white;
+  }
+}
+
+#skills {
+  position: absolute;
+  background: $blue;
+  left: 0px;
+  top: 1100vh;
+  min-width: 50vw;
+
+  h2 {
+    position: relative;
+    margin: 0;
+    width: 100%;
+    top: calc(50% - 20px);
+    font-size: 3em;
+    text-align: center;
+    color: $white;
+  }
+
+  .navbar {
+    top: calc(100vh - 50px);
+
+    li:not(:first-of-type):before {
+      content: '  .  ';
+      color: $white;
+      vertical-align: 30%;
+    }
+
+    a {
+      color: $white;
+      &:hover {
+        color: $black;
+      }
+    }
+  }
+}
+
+#skills-info {
+  background: $red;
+  position: absolute;
+  right: 0px;
+  top: 1100vh;
+  height: 500vh;
+
+  p {
+    position: relative;
+    display: block;
+    text-align: center;
+    top: 50vh;
+    margin: auto;
+    width: 90%;
+    color: $black;
+  }
+}
+
+#animation {
+  position: absolute;
+  width: 100%;
+  height: 500vh;
+  background-color: $black;
+  top: 1600vh;
+}
+
+#contact {
+  position: absolute;
+  width: 100%;
+  height: 10vh;
+  background-color: $black;
+  top: 2100vh;
+
+  .social-buttons {
+    position: absolute;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    padding-top: 3vh;
+
+    li {
+      display: inline;
+      margin: 0 25px 0 25px;
+      i {
+        display: inline-block;
+        color: $white;
+        text-align: center;
+        font-size: 2em;
+        text-decoration: none;
+        transition: color .2s ease-out;
+
+        &:hover {
+          color: $blue;
+          cursor: pointer;
+        }
+      }
+    }
   }
 }

@@ -77,7 +77,7 @@ body {
       color: #355384; }
 
 #landing {
-  width: auto;
+  width: 100%;
   height: 100vh;
   background: #25242B url("/img/spidey.jpg") no-repeat center center fixed;
   background-size: cover; }
@@ -93,7 +93,7 @@ body {
   #landing .navbar {
     bottom: 50px; }
 
-#about, #about-info, #work, #work-info {
+#about, #about-info, #work, #work-info, #skills, #skills-info {
   width: 50%;
   height: 100vh; }
 
@@ -115,7 +115,7 @@ body {
 
 #about-info {
   background: #BF4141;
-  height: 400vh;
+  height: 500vh;
   position: absolute;
   right: 0px;
   top: 100vh; }
@@ -136,7 +136,7 @@ body {
   position: absolute;
   background: #BF4141;
   left: 0px;
-  top: 500vh;
+  top: 600vh;
   min-width: 50vw; }
   #work h2 {
     position: relative;
@@ -161,8 +161,8 @@ body {
   background: #355384;
   position: absolute;
   right: 0px;
-  top: 500vh;
-  height: 400vh; }
+  top: 600vh;
+  height: 500vh; }
   #work-info p {
     position: relative;
     display: block;
@@ -171,3 +171,78 @@ body {
     margin: auto;
     width: 90%;
     color: #CACBCE; }
+
+#skills {
+  position: absolute;
+  background: #355384;
+  left: 0px;
+  top: 1100vh;
+  min-width: 50vw; }
+  #skills h2 {
+    position: relative;
+    margin: 0;
+    width: 100%;
+    top: calc(50% - 20px);
+    font-size: 3em;
+    text-align: center;
+    color: #CACBCE; }
+  #skills .navbar {
+    top: calc(100vh - 50px); }
+    #skills .navbar li:not(:first-of-type):before {
+      content: '  .  ';
+      color: #CACBCE;
+      vertical-align: 30%; }
+    #skills .navbar a {
+      color: #CACBCE; }
+      #skills .navbar a:hover {
+        color: #25242B; }
+
+#skills-info {
+  background: #BF4141;
+  position: absolute;
+  right: 0px;
+  top: 1100vh;
+  height: 500vh; }
+  #skills-info p {
+    position: relative;
+    display: block;
+    text-align: center;
+    top: 50vh;
+    margin: auto;
+    width: 90%;
+    color: #25242B; }
+
+#animation {
+  position: absolute;
+  width: 100%;
+  height: 500vh;
+  background-color: #25242B;
+  top: 1600vh; }
+
+#contact {
+  position: absolute;
+  width: 100%;
+  height: 10vh;
+  background-color: #25242B;
+  top: 2100vh; }
+  #contact .social-buttons {
+    position: absolute;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    padding-top: 3vh; }
+    #contact .social-buttons li {
+      display: inline;
+      margin: 0 25px 0 25px; }
+      #contact .social-buttons li i {
+        display: inline-block;
+        color: #CACBCE;
+        text-align: center;
+        font-size: 2em;
+        text-decoration: none;
+        transition: color .2s ease-out; }
+        #contact .social-buttons li i:hover {
+          color: #355384;
+          cursor: pointer; }
