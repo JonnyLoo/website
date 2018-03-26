@@ -45,6 +45,15 @@ $black: #25242B;
   }
 }
 
+@keyframes zoomin {
+  from {
+    transform: translateZ(0);
+  }
+  to {
+    transform: translateZ(200px);
+  }
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -150,7 +159,7 @@ body {
 }
 
 #about {
-  background: $blue;
+  background: $red;
   float: left;
 
   h2 {
@@ -160,24 +169,34 @@ body {
     top: calc(50% - 20px);
     font-size: 3em;
     text-align: center;
-    color: $white;
+    color: $black;
   }
 
   .navbar {
     top: calc(100vh - 50px);
 
-    a:hover {
+    li:not(:first-of-type):before {
+      content: '  .  ';
       color: $black;
+      vertical-align: 30%;
+    }
+
+    a {
+      color: $black;
+      &:hover {
+        color: $white;
+      }
     }
   }
 }
 
 #about-info {
-  background: $red;
+  background: $blue;
   height: 500vh;
   position: absolute;
   right: 0px;
   top: 100vh;
+  color: $white;
 
   p {
     position: relative;
@@ -198,9 +217,97 @@ body {
 
 #work {
   position: absolute;
-  background: $red;
+  background: $blue;
   left: 0px;
   top: 600vh;
+  min-width: 50vw;
+
+  h2 {
+    position: relative;
+    margin: 0;
+    width: 100%;
+    top: calc(50% - 20px);
+    font-size: 3em;
+    text-align: center;
+    color: $white;
+  }
+
+  .navbar {
+    top: calc(100vh - 50px);
+
+    a:hover {
+      color: $black;
+    }
+  }
+}
+
+#work-info {
+  background: $blue;
+  position: absolute;
+  right: 0px;
+  top: 600vh;
+  height: 500vh;
+  overflow: hidden;
+
+  .section {
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+    width: 100%;
+    height: 20%;
+    top: 0;
+    background: linear-gradient(-45deg, $white 0%, $blue 100%);
+
+    img {
+      opacity: .95;
+      min-width: 100%;
+      min-height: 100%;
+      max-height: 100%;
+    }
+
+    figcaption::after,
+    img {
+      -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+      transition: opacity 0.35s, transform 0.35s;
+    }
+
+    figcaption::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-top: 1px solid $white;
+      border-bottom: 1px solid $white;
+      content: '';
+      opacity: 0;
+      -webkit-transform: rotate3d(0, 0, 1, 45deg) scale3d(1, 0, 1);
+      transform: rotate3d(0, 0, 1, 45deg) scale3d(1, 0, 1);
+      -webkit-transform-origin: 50% 50%;
+      transform-origin: 50% 50%;
+    }
+
+    &:hover {
+      img {
+        opacity: 0.7;
+        -webkit-transform: scale3d(1.05,1.05,1);
+        transform: scale3d(1.05,1.05,1);
+      }
+
+      figcaption::after {
+        opacity: 1;
+        -webkit-transform: rotate3d(0,0,1,45deg) scale3d(1,1,1);
+        transform: rotate3d(0,0,1,45deg) scale3d(1,1,1);
+      }
+    }
+  }
+}
+
+#skills {
+  position: absolute;
+  background: $red;
+  left: 0px;
+  top: 1100vh;
   min-width: 50vw;
 
   h2 {
@@ -231,61 +338,8 @@ body {
   }
 }
 
-#work-info {
-  background: $blue;
-  position: absolute;
-  right: 0px;
-  top: 600vh;
-  height: 500vh;
-
-  p {
-    position: relative;
-    display: block;
-    text-align: center;
-    top: 50vh;
-    margin: auto;
-    width: 90%;
-    color: $white;
-  }
-}
-
-#skills {
-  position: absolute;
-  background: $blue;
-  left: 0px;
-  top: 1100vh;
-  min-width: 50vw;
-
-  h2 {
-    position: relative;
-    margin: 0;
-    width: 100%;
-    top: calc(50% - 20px);
-    font-size: 3em;
-    text-align: center;
-    color: $white;
-  }
-
-  .navbar {
-    top: calc(100vh - 50px);
-
-    li:not(:first-of-type):before {
-      content: '  .  ';
-      color: $white;
-      vertical-align: 30%;
-    }
-
-    a {
-      color: $white;
-      &:hover {
-        color: $black;
-      }
-    }
-  }
-}
-
 #skills-info {
-  background: $red;
+  background: $blue;
   position: absolute;
   right: 0px;
   top: 1100vh;
@@ -298,7 +352,7 @@ body {
     top: 50vh;
     margin: auto;
     width: 90%;
-    color: $black;
+    color: $white;
   }
 }
 

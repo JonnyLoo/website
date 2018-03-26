@@ -26,6 +26,12 @@
   to {
     transform: translateY(-200vh); } }
 
+@keyframes zoomin {
+  from {
+    transform: translateZ(0); }
+  to {
+    transform: translateZ(200px); } }
+
 body {
   margin: 0;
   padding: 0;
@@ -98,7 +104,7 @@ body {
   height: 100vh; }
 
 #about {
-  background: #355384;
+  background: #BF4141;
   float: left; }
   #about h2 {
     position: relative;
@@ -107,18 +113,25 @@ body {
     top: calc(50% - 20px);
     font-size: 3em;
     text-align: center;
-    color: #CACBCE; }
+    color: #25242B; }
   #about .navbar {
     top: calc(100vh - 50px); }
-    #about .navbar a:hover {
+    #about .navbar li:not(:first-of-type):before {
+      content: '  .  ';
+      color: #25242B;
+      vertical-align: 30%; }
+    #about .navbar a {
       color: #25242B; }
+      #about .navbar a:hover {
+        color: #CACBCE; }
 
 #about-info {
-  background: #BF4141;
+  background: #355384;
   height: 500vh;
   position: absolute;
   right: 0px;
-  top: 100vh; }
+  top: 100vh;
+  color: #CACBCE; }
   #about-info p {
     position: relative;
     display: block;
@@ -134,7 +147,7 @@ body {
 
 #work {
   position: absolute;
-  background: #BF4141;
+  background: #355384;
   left: 0px;
   top: 600vh;
   min-width: 50vw; }
@@ -145,36 +158,62 @@ body {
     top: calc(50% - 20px);
     font-size: 3em;
     text-align: center;
-    color: #25242B; }
+    color: #CACBCE; }
   #work .navbar {
     top: calc(100vh - 50px); }
-    #work .navbar li:not(:first-of-type):before {
-      content: '  .  ';
-      color: #25242B;
-      vertical-align: 30%; }
-    #work .navbar a {
+    #work .navbar a:hover {
       color: #25242B; }
-      #work .navbar a:hover {
-        color: #CACBCE; }
 
 #work-info {
   background: #355384;
   position: absolute;
   right: 0px;
   top: 600vh;
-  height: 500vh; }
-  #work-info p {
+  height: 500vh;
+  overflow: hidden; }
+  #work-info .section {
+    overflow: hidden;
     position: relative;
-    display: block;
-    text-align: center;
-    top: 50vh;
-    margin: auto;
-    width: 90%;
-    color: #CACBCE; }
+    margin: 0;
+    width: 100%;
+    height: 20%;
+    top: 0;
+    background: linear-gradient(-45deg, #CACBCE 0%, #355384 100%); }
+    #work-info .section img {
+      opacity: .95;
+      min-width: 100%;
+      min-height: 100%;
+      max-height: 100%; }
+    #work-info .section figcaption::after,
+    #work-info .section img {
+      -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+      transition: opacity 0.35s, transform 0.35s; }
+    #work-info .section figcaption::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-top: 1px solid #CACBCE;
+      border-bottom: 1px solid #CACBCE;
+      content: '';
+      opacity: 0;
+      -webkit-transform: rotate3d(0, 0, 1, 45deg) scale3d(1, 0, 1);
+      transform: rotate3d(0, 0, 1, 45deg) scale3d(1, 0, 1);
+      -webkit-transform-origin: 50% 50%;
+      transform-origin: 50% 50%; }
+    #work-info .section:hover img {
+      opacity: 0.7;
+      -webkit-transform: scale3d(1.05, 1.05, 1);
+      transform: scale3d(1.05, 1.05, 1); }
+    #work-info .section:hover figcaption::after {
+      opacity: 1;
+      -webkit-transform: rotate3d(0, 0, 1, 45deg) scale3d(1, 1, 1);
+      transform: rotate3d(0, 0, 1, 45deg) scale3d(1, 1, 1); }
 
 #skills {
   position: absolute;
-  background: #355384;
+  background: #BF4141;
   left: 0px;
   top: 1100vh;
   min-width: 50vw; }
@@ -185,20 +224,20 @@ body {
     top: calc(50% - 20px);
     font-size: 3em;
     text-align: center;
-    color: #CACBCE; }
+    color: #25242B; }
   #skills .navbar {
     top: calc(100vh - 50px); }
     #skills .navbar li:not(:first-of-type):before {
       content: '  .  ';
-      color: #CACBCE;
+      color: #25242B;
       vertical-align: 30%; }
     #skills .navbar a {
-      color: #CACBCE; }
+      color: #25242B; }
       #skills .navbar a:hover {
-        color: #25242B; }
+        color: #CACBCE; }
 
 #skills-info {
-  background: #BF4141;
+  background: #355384;
   position: absolute;
   right: 0px;
   top: 1100vh;
@@ -210,7 +249,7 @@ body {
     top: 50vh;
     margin: auto;
     width: 90%;
-    color: #25242B; }
+    color: #CACBCE; }
 
 #animation {
   position: absolute;
