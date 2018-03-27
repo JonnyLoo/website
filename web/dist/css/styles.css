@@ -113,17 +113,11 @@ body {
     top: calc(50% - 20px);
     font-size: 3em;
     text-align: center;
-    color: #25242B; }
+    color: #CACBCE; }
   #about .navbar {
     top: calc(100vh - 50px); }
-    #about .navbar li:not(:first-of-type):before {
-      content: '  .  ';
-      color: #25242B;
-      vertical-align: 30%; }
-    #about .navbar a {
+    #about .navbar a:hover {
       color: #25242B; }
-      #about .navbar a:hover {
-        color: #CACBCE; }
 
 #about-info {
   background: #355384;
@@ -132,17 +126,29 @@ body {
   right: 0px;
   top: 100vh;
   color: #CACBCE; }
-  #about-info p {
+  #about-info h1, #about-info h2, #about-info p {
+    font-family: 'Raleway', sans-serif;
+    text-transform: none;
     position: relative;
     display: block;
-    text-align: center;
-    top: 50vh;
-    margin: auto;
-    width: 90%; }
+    text-align: left;
+    margin: 0 0 0 8vw;
+    width: 75%; }
+  #about-info h1 {
+    padding-top: 6vh;
+    padding-bottom: 6vh;
+    font-size: 1.5em; }
+  #about-info h2 {
+    padding-top: 15vh;
+    padding-bottom: 4vh;
+    font-size: 1em; }
+  #about-info p {
+    line-height: 1.5em;
+    font-size: .9em; }
   #about-info .hexagon {
     position: absolute;
     top: 100px;
-    transform: translate(-50%);
+    transform: translate(-50%) rotateZ(90deg);
     z-index: 1; }
 
 #work {
@@ -178,12 +184,24 @@ body {
     width: 100%;
     height: 20%;
     top: 0;
-    background: linear-gradient(-45deg, #CACBCE 0%, #355384 100%); }
+    background: linear-gradient(-45deg, #355384 0%, #25242B 100%); }
     #work-info .section img {
       opacity: .95;
       min-width: 100%;
-      min-height: 100%;
-      max-height: 100%; }
+      height: 100%; }
+    #work-info .section .caption {
+      font-family: 'Raleway', sans-serif;
+      text-transform: none;
+      position: absolute;
+      color: #CACBCE;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      text-align: center;
+      top: 30%;
+      left: 0;
+      z-index: 1;
+      font-size: 4em; }
     #work-info .section figcaption::after,
     #work-info .section img {
       -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
@@ -224,17 +242,11 @@ body {
     top: calc(50% - 20px);
     font-size: 3em;
     text-align: center;
-    color: #25242B; }
+    color: #CACBCE; }
   #skills .navbar {
     top: calc(100vh - 50px); }
-    #skills .navbar li:not(:first-of-type):before {
-      content: '  .  ';
-      color: #25242B;
-      vertical-align: 30%; }
-    #skills .navbar a {
+    #skills .navbar a:hover {
       color: #25242B; }
-      #skills .navbar a:hover {
-        color: #CACBCE; }
 
 #skills-info {
   background: #355384;

@@ -15,18 +15,13 @@ RESUME:
 
   "web" developer pun (hehe cuz spiders)
 
-  Pokecollector
   Lphie
+  Pokecollector
   nVent.xyz
   SRI International
   Purdue Pharma
 
   Kent Hack Enough - Radio app
   Hack Princeton - VR Game
-  HackNYU -
-
-  linkedin
-  github
-  other websites (facebook?)
-  contact info
+  HackNYU - Web app
 ```

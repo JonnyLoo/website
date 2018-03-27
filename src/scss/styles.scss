@@ -169,23 +169,14 @@ body {
     top: calc(50% - 20px);
     font-size: 3em;
     text-align: center;
-    color: $black;
+    color: $white;
   }
 
   .navbar {
     top: calc(100vh - 50px);
 
-    li:not(:first-of-type):before {
-      content: '  .  ';
-      color: $black;
-      vertical-align: 30%;
-    }
-
-    a {
-      color: $black;
-      &:hover {
-        color: $white;
-      }
+    a:hover {
+      color: $black
     }
   }
 }
@@ -198,19 +189,37 @@ body {
   top: 100vh;
   color: $white;
 
-  p {
+  h1, h2, p {
+    font-family: 'Raleway', sans-serif;
+    text-transform: none;
     position: relative;
     display: block;
-    text-align: center;
-    top: 50vh;
-    margin: auto;
-    width: 90%;
+    text-align: left;
+    margin: 0 0 0 8vw;
+    width: 75%;
+  }
+
+  h1 {
+    padding-top: 6vh;
+    padding-bottom: 6vh;
+    font-size: 1.5em;
+  }
+
+  h2 {
+    padding-top: 15vh;
+    padding-bottom: 4vh;
+    font-size: 1em;
+  }
+
+  p {
+    line-height: 1.5em;
+    font-size: .9em;
   }
 
   .hexagon {
     position: absolute;
     top: 100px;
-    transform: translate(-50%);
+    transform: translate(-50%) rotateZ(90deg);
     z-index: 1;
   }
 }
@@ -256,13 +265,27 @@ body {
     width: 100%;
     height: 20%;
     top: 0;
-    background: linear-gradient(-45deg, $white 0%, $blue 100%);
+    background: linear-gradient(-45deg, $blue 0%, $black 100%);
 
     img {
       opacity: .95;
       min-width: 100%;
-      min-height: 100%;
-      max-height: 100%;
+      height: 100%;
+    }
+
+    .caption {
+      font-family: 'Raleway', sans-serif;
+      text-transform: none;
+      position: absolute;
+      color: $white;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      text-align: center;
+      top: 30%;
+      left: 0;
+      z-index: 1;
+      font-size: 4em;
     }
 
     figcaption::after,
@@ -317,23 +340,14 @@ body {
     top: calc(50% - 20px);
     font-size: 3em;
     text-align: center;
-    color: $black;
+    color: $white;
   }
 
   .navbar {
     top: calc(100vh - 50px);
 
-    li:not(:first-of-type):before {
-      content: '  .  ';
+    a:hover {
       color: $black;
-      vertical-align: 30%;
-    }
-
-    a {
-      color: $black;
-      &:hover {
-        color: $white;
-      }
     }
   }
 }

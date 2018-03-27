@@ -23,6 +23,15 @@ function createSceneAbout() {
   .addTo(controller);
 }
 
+function createHexagonScene() {
+  return new ScrollMagic.Scene({
+    offset: landing.height(),
+    duration: aboutinfo.height() - landing.height()
+  })
+  .setPin(".hexagon", {pushFollowers: false})
+  .addTo(controller);
+}
+
 function createSceneWork() {
   return new ScrollMagic.Scene({
     offset: landing.height() + aboutinfo.height(),
@@ -43,12 +52,15 @@ function createSceneSkills() {
 
 $(document).ready(function() {
   let sceneAbout = createSceneAbout();
+  let sceneHex = createHexagonScene();
   let sceneWork = createSceneWork();
   let sceneSkills = createSceneSkills();
 
   $(window).on('resize', function() {
       sceneAbout.destroy(true);
       sceneAbout = createSceneAbout();
+      sceneHex.destroy(true);
+      sceneHex = createHexagonScene();
       sceneWork.destroy(true);
       sceneWork = createSceneWork();
       sceneSkills.destroy(true);
