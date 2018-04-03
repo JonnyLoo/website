@@ -26,12 +26,6 @@
   to {
     transform: translateY(-200vh); } }
 
-@keyframes zoomin {
-  from {
-    transform: translateZ(0); }
-  to {
-    transform: translateZ(200px); } }
-
 body {
   margin: 0;
   padding: 0;
@@ -121,12 +115,12 @@ body {
 
 #about-info {
   background: #355384;
-  height: 500vh;
+  height: 400vh;
   position: absolute;
   right: 0px;
   top: 100vh;
   color: #CACBCE; }
-  #about-info h1, #about-info h2, #about-info p {
+  #about-info h1, #about-info h2, #about-info p, #about-info ul {
     font-family: 'Raleway', sans-serif;
     text-transform: none;
     position: relative;
@@ -145,6 +139,18 @@ body {
   #about-info p {
     line-height: 1.5em;
     font-size: .9em; }
+  #about-info ul {
+    line-height: 40px;
+    font-size: .9em;
+    text-decoration: none;
+    list-style: none;
+    padding-left: 0; }
+    #about-info ul li {
+      display: inline;
+      border: solid #CACBCE;
+      border-radius: 20px;
+      padding: 5px 20px 5px 20px;
+      white-space: nowrap; }
   #about-info .hexagon {
     position: absolute;
     top: 100px;
@@ -155,7 +161,7 @@ body {
   position: absolute;
   background: #355384;
   left: 0px;
-  top: 600vh;
+  top: 500vh;
   min-width: 50vw; }
   #work h2 {
     position: relative;
@@ -174,7 +180,7 @@ body {
   background: #355384;
   position: absolute;
   right: 0px;
-  top: 600vh;
+  top: 500vh;
   height: 500vh;
   overflow: hidden; }
   #work-info .section {
@@ -229,53 +235,19 @@ body {
       -webkit-transform: rotate3d(0, 0, 1, 45deg) scale3d(1, 1, 1);
       transform: rotate3d(0, 0, 1, 45deg) scale3d(1, 1, 1); }
 
-#skills {
-  position: absolute;
-  background: #BF4141;
-  left: 0px;
-  top: 1100vh;
-  min-width: 50vw; }
-  #skills h2 {
-    position: relative;
-    margin: 0;
-    width: 100%;
-    top: calc(50% - 20px);
-    font-size: 3em;
-    text-align: center;
-    color: #CACBCE; }
-  #skills .navbar {
-    top: calc(100vh - 50px); }
-    #skills .navbar a:hover {
-      color: #25242B; }
-
-#skills-info {
-  background: #355384;
-  position: absolute;
-  right: 0px;
-  top: 1100vh;
-  height: 500vh; }
-  #skills-info p {
-    position: relative;
-    display: block;
-    text-align: center;
-    top: 50vh;
-    margin: auto;
-    width: 90%;
-    color: #CACBCE; }
-
 #animation {
   position: absolute;
   width: 100%;
   height: 500vh;
   background-color: #25242B;
-  top: 1600vh; }
+  top: 1000vh; }
 
 #contact {
   position: absolute;
   width: 100%;
   height: 10vh;
   background-color: #25242B;
-  top: 2100vh; }
+  top: 1500vh; }
   #contact .social-buttons {
     position: absolute;
     list-style-type: none;

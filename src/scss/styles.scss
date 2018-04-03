@@ -45,15 +45,6 @@ $black: #25242B;
   }
 }
 
-@keyframes zoomin {
-  from {
-    transform: translateZ(0);
-  }
-  to {
-    transform: translateZ(200px);
-  }
-}
-
 body {
   margin: 0;
   padding: 0;
@@ -183,13 +174,13 @@ body {
 
 #about-info {
   background: $blue;
-  height: 500vh;
+  height: 400vh;
   position: absolute;
   right: 0px;
   top: 100vh;
   color: $white;
 
-  h1, h2, p {
+  h1, h2, p, ul {
     font-family: 'Raleway', sans-serif;
     text-transform: none;
     position: relative;
@@ -216,6 +207,22 @@ body {
     font-size: .9em;
   }
 
+  ul {
+    line-height: 40px;
+    font-size: .9em;
+    text-decoration: none;
+    list-style: none;
+    padding-left: 0;
+
+    li {
+      display: inline;
+      border: solid $white;
+      border-radius: 20px;
+      padding: 5px 20px 5px 20px;
+      white-space: nowrap;
+    }
+  }
+
   .hexagon {
     position: absolute;
     top: 100px;
@@ -228,7 +235,7 @@ body {
   position: absolute;
   background: $blue;
   left: 0px;
-  top: 600vh;
+  top: 500vh;
   min-width: 50vw;
 
   h2 {
@@ -254,7 +261,7 @@ body {
   background: $blue;
   position: absolute;
   right: 0px;
-  top: 600vh;
+  top: 500vh;
   height: 500vh;
   overflow: hidden;
 
@@ -326,56 +333,12 @@ body {
   }
 }
 
-#skills {
-  position: absolute;
-  background: $red;
-  left: 0px;
-  top: 1100vh;
-  min-width: 50vw;
-
-  h2 {
-    position: relative;
-    margin: 0;
-    width: 100%;
-    top: calc(50% - 20px);
-    font-size: 3em;
-    text-align: center;
-    color: $white;
-  }
-
-  .navbar {
-    top: calc(100vh - 50px);
-
-    a:hover {
-      color: $black;
-    }
-  }
-}
-
-#skills-info {
-  background: $blue;
-  position: absolute;
-  right: 0px;
-  top: 1100vh;
-  height: 500vh;
-
-  p {
-    position: relative;
-    display: block;
-    text-align: center;
-    top: 50vh;
-    margin: auto;
-    width: 90%;
-    color: $white;
-  }
-}
-
 #animation {
   position: absolute;
   width: 100%;
   height: 500vh;
   background-color: $black;
-  top: 1600vh;
+  top: 1000vh;
 }
 
 #contact {
@@ -383,7 +346,7 @@ body {
   width: 100%;
   height: 10vh;
   background-color: $black;
-  top: 2100vh;
+  top: 1500vh;
 
   .social-buttons {
     position: absolute;
