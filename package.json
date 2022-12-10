@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/JonnyLoo/website#readme",
   "dependencies": {
-    "express": "^4.16.2",
+    "express": "^4.17.3",
     "hbs": "^4.0.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
